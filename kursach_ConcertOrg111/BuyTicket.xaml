@@ -5,15 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:kursach_ConcertOrg111"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="390" d:DesignWidth="300"
       Title="BuyTicket" Name="BuyTicketPage">
 
     <Grid Background="Pink" DataContext="{Binding ElementName=BuyTicketPage, Path=.}">
         <ComboBox SelectedItem="{Binding GenresOfMusic}" Name="ComboBoxGenresOfMusic" DisplayMemberPath="Genres" HorizontalAlignment="Left" Margin="99,72,0,0"  VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
-        <Label Content="Genres" HorizontalAlignment="Left" Margin="25,68,0,0" VerticalAlignment="Top" FontFamily="Magneto" Foreground="#FF2BFF00"/>
+        <Label Content="Genres" HorizontalAlignment="Left" Margin="36,71,0,0" VerticalAlignment="Top" FontFamily="Magneto" Foreground="Black" Background="Transparent"/>
         <ComboBox SelectedItem="{Binding Executor}" Name="ComboBoxExecutor" DisplayMemberPath="Name" HorizontalAlignment="Left" Margin="99,111,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox SelectedItem="{Binding Place}" Name="ComboBoxPlace" DisplayMemberPath="Place1" HorizontalAlignment="Left" Margin="99,152,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Executors" HorizontalAlignment="Left" Margin="25,109,0,0" VerticalAlignment="Top" FontFamily="Magneto"/>
-
+        <Label Content="Place" HorizontalAlignment="Left" Margin="45,151,0,0" VerticalAlignment="Top" FontFamily="Magneto"/>
+        <ComboBox SelectedItem="{Binding Price}" Name="ComboBoxPrice" DisplayMemberPath="Price1" HorizontalAlignment="Left" Margin="99,187,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="46,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.056,-0.314" FontFamily="Magneto"/>
+        <Label Content="Buying Tickets" HorizontalAlignment="Left" Margin="56,0,0,0" VerticalAlignment="Top" FontFamily="Magneto" FontSize="24"/>
+        <Label Content="Beginning in:" HorizontalAlignment="Left" Margin="8,288,0,0" VerticalAlignment="Top" FontFamily="Magneto" FontSize="16"/>
+        <Label Content="Date: 29.06.2022" HorizontalAlignment="Left" Margin="8,316,0,0" VerticalAlignment="Top" FontFamily="Magneto" RenderTransformOrigin="0.516,1.275"/>
+        <Label Content="Time: 18:00" HorizontalAlignment="Left" Margin="8,341,0,0" VerticalAlignment="Top" FontFamily="Magneto" FontWeight="Normal"/>
+        <Button Content="Payment" HorizontalAlignment="Left" Margin="89,223,0,0" VerticalAlignment="Top" FontFamily="Magneto" Width="142" Height="61" BorderBrush="Black" Foreground="#FF020202" Background="#00DDDDDD" Click="Button_Click"/>
     </Grid>
 </Page>

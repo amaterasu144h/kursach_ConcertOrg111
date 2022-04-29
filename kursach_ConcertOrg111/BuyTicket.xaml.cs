@@ -25,6 +25,7 @@ namespace kursach_ConcertOrg111
         public Model.GenresOfMusic GenresOfMusic { get; set; } = new Model.GenresOfMusic() { };
         public Model.Executor Executor { get; set; } = new Model.Executor();
         public Model.Place Place { get; set; } = new Model.Place();
+        public Model.Price Price { get; set; } = new Model.Price();
 
      
         
@@ -33,10 +34,17 @@ namespace kursach_ConcertOrg111
             InitializeComponent();
             ComboBoxGenresOfMusic.ItemsSource = Connection.GenresOfMusic.ToList();
             ComboBoxPlace.ItemsSource = Connection.Place.ToList();
+            ComboBoxPrice.ItemsSource = Connection.Price.ToList();
         }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBoxExecutor.ItemsSource = Connection.Executor.Where(ex => ex.Genres == GenresOfMusic.Genres).ToList();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Model.Receipt());
 
         }
     }
